@@ -1,0 +1,53 @@
+
+<div class="container">
+  <div class="row"></div>
+  <div class="row"></div>
+  <div class="row"></div>
+    <div class="center">
+        <h3 class="teal-text">Notes</h3>
+    </div>
+    
+    
+    <div class="row">
+      <div class="row"></div>
+      <div class="row"></div>
+      <div class="row"></div>
+      <div class="row"></div>
+      <div class="row"></div>
+      <div class="row"></div>
+      <div class="row"></div>
+      <div>
+        <form class="col s12"  [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+          <div class="input-field col s12">
+            <input id="username" type="text" class="validate"  formControlName="username">
+            <label for="username">username</label>
+            <span class="helper-text" data-error="Please enter a username" data-success=""></span>
+          </div>
+
+          <div class="input-field col s12">
+              <input id="email" type="email" class="validate"  formControlName="email">
+              <label for="email">Email</label>
+              <span class="helper-text" data-error="Please enter valid email" data-success=""></span>
+            </div>
+            <div class="input-field col s12">
+              <input id="password" type="password" class="validate" formControlName="password">
+              <label for="password">Password</label>
+            </div>
+            <div class="input-field col s12">
+              <input id="cpassword" type="password" [ngClass]="( (this.registerForm.value.confirmpassword!='' && this.registerForm.value.password==this.registerForm.value.confirmpassword)?'valid':this.registerForm.value.confirmpassword==''?'validate':'invalid')" formControlName="confirmpassword">
+              <label for="cpassword">Confirm Password</label>
+              <span class="helper-text" data-error="Password doesn't match" data-success=""></span>
+            </div>
+
+            <div class="center">
+              <button id='submit' class="btn waves-effect waves-light" [disabled]="!registerForm.valid"  type="submit" >Sign up
+                  <i class="material-icons right">send</i>
+                </button>
+
+                <a class="teal-text signin flow-text" [routerLink]="['/login']">Sign In</a>
+            </div>
+      </form>
+      </div>
+      
+      </div>
+</div>

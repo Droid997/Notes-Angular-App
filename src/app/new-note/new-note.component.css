@@ -1,0 +1,7 @@
+.custom-input, .custom-input:focus{
+    border-bottom: none!important;
+    box-shadow: none!important;
+  }
+.note-title{
+    font-size: 25px !important;
+}

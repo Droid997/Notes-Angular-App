@@ -1,0 +1,6 @@
+{
+    "/api": {
+      "target": "http://localhost:5000/notes-a06e0/us-central1/app",
+      "secure": false
+    }
+}

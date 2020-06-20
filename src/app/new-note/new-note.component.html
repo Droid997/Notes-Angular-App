@@ -1,0 +1,10 @@
+<div class="row">
+  <form class="col s12">
+    <div class="row center-align">
+      <div class="input-field col s12">
+        <input placeholder="Title" id="note-title" class="custom-input note-title" [ngModelOptions]="{standalone: true}" [(ngModel)]="note.title">
+        <textarea id="note-content" name="content" placeholder="Note" [ngModelOptions]="{standalone: true}" [(ngModel)]="note.content" class="materialize-textarea custom-input"></textarea>
+      </div>
+    </div>
+  </form>
+</div>
